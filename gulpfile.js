@@ -9,6 +9,7 @@ var gulp = require('gulp'),
   merge = require('merge-stream'),
   htmlreplace = require('gulp-html-replace'),
   autoprefixer = require('gulp-autoprefixer'),
+  ghpages = require('gh-pages'),
   browserSync = require('browser-sync').create();
 
 // Clean task
@@ -122,10 +123,22 @@ gulp.task('dev', function browserDev(done) {
 gulp.task("build", gulp.series(gulp.parallel('css:minify', 'js:minify', 'vendor'), 'vendor:build', function copyAssets() {
   return gulp.src([
     '*.html',
-    "assets/img/**"
+    "assets/img/**",
+    '.nojekyll'
   ], { base: './'})
     .pipe(gulp.dest('dist'));
 }));
+
+gulp.task("ghpages", function ghpagespublish() {
+  ghpages.publish('dist', {dotfiles: true}, function(err) { 
+    if (!err) {
+      console.log("Published to GitHub pages!");
+      done();
+    }
+  })
+});
+
+gulp.task("deploy", gulp.series("clean", 'build', 'replaceHtmlBlock', 'ghpages'));
 
 // Default task
 gulp.task("default", gulp.series("clean", 'build', 'replaceHtmlBlock'));
