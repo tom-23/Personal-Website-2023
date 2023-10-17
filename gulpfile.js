@@ -21,7 +21,8 @@ gulp.task('clean', function() {
 gulp.task('vendor:js', function() {
   return gulp.src([
     './node_modules/bootstrap/dist/js/*',
-    './node_modules/@popperjs/core/dist/umd/popper.*'
+    './node_modules/@popperjs/core/dist/umd/popper.*',
+    './node_modules/luxy.js/dist/js/luxy.*'
   ])
     .pipe(gulp.dest('./assets/js/vendor'));
 });
@@ -43,7 +44,8 @@ gulp.task('vendor', gulp.parallel('vendor:fonts', 'vendor:js'));
 gulp.task('vendor:build', function() {
   var jsStream = gulp.src([
     './assets/js/vendor/bootstrap.bundle.min.js',
-    './assets/js/vendor/popper.min.js'
+    './assets/js/vendor/popper.min.js',
+    './assets/js/vendor/luxy.min.js'
   ])
     .pipe(gulp.dest('./dist/assets/js/vendor'));
   var fontStream = gulp.src(['./assets/fonts/bootstrap-icons/**/*.*']).pipe(gulp.dest('./dist/assets/fonts/bootstrap-icons'));
@@ -124,12 +126,13 @@ gulp.task("build", gulp.series(gulp.parallel('css:minify', 'js:minify', 'vendor'
   return gulp.src([
     '*.html',
     "assets/img/**",
-    '.nojekyll'
+    '.nojekyll',
+    'CNAME'
   ], { base: './'})
     .pipe(gulp.dest('dist'));
 }));
 
-gulp.task("ghpages", function ghpagespublish() {
+gulp.task("ghpages", function ghpagespublish(done) {
   ghpages.publish('dist', {dotfiles: true}, function(err) { 
     if (!err) {
       console.log("Published to GitHub pages!");
