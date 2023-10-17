@@ -1,0 +1,104 @@
+/* Navbar Animation (Credits: codepen.io/bennettfeely)
+------------------------- */
+
+$duration: 0.5s;
+
+$size: 100%;
+$toggled-size: 0.75;
+
+$navicon-width: 15px;
+$navicon-height: 2.5px;
+$navicon-distance: 4.5px;
+$navicon-hover-distance: 6.5px;
+
+$bg: #274380;
+$nav-bg: #000;
+
+.navicon-button {
+    display: inline-block;
+    position: relative;
+    padding: 2.0625rem 1.5rem;
+    transition: calc($duration/2);
+    cursor: pointer;
+    user-select: none;
+    padding: 15px;
+    border: none;
+    .navicon:before,
+    .navicon:after {
+        transition: calc($duration/2);
+    }
+
+    &:hover {
+        transition: $duration;
+
+        .navicon:before,
+        .navicon:after {
+            transition: calc($duration/2);
+        }
+
+        .navicon:before {
+            top: $navicon-hover-distance;
+        }
+        .navicon:after {
+            top: calc($navicon-hover-distance * -1);
+        }
+    }
+}
+
+.navicon {
+    position: relative;
+    width: $navicon-width;
+    height: $navicon-height;
+    background: var(--foreground-colour);
+    transition: $duration;
+    border-radius: 0;
+
+    &:before,
+    &:after {
+        display: block;
+        content: "";
+        height: $navicon-height;
+        width: $navicon-width;
+        background: var(--foreground-colour);
+        position: absolute;
+        z-index: -1;
+        transition: $duration calc($duration / 2);
+        border-radius: 0;
+    }
+
+    &:before {
+        top: calc($navicon-distance);
+    }
+    &:after {
+        top: calc($navicon-distance * -1);
+    }
+}
+
+.open:not(.steps) .navicon:before,
+.open:not(.steps) .navicon:after {
+    top: 0 !important;
+}
+
+.open .navicon:before,
+.open .navicon:after {
+    transition: $duration;
+}
+
+/* Minus */
+.open {
+    transform: scale($toggled-size);
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    animation: slide-up 0.75s cubic-bezier(0.65, 0, 0.35, 1) both
+}
+

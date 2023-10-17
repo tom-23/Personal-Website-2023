@@ -1,1 +1,101 @@
 // General Style
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800&display=swap');
+
+* {
+    font-family: 'Helvetica Neue', sans-serif;
+    overscroll-behavior: none;
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }  
+
+p, a {
+    font-size: 10pt;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 55px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+#butter {
+    padding-bottom: 180px;
+}
+
+.hero-title div {
+    overflow: hidden;
+}
+
+.hero-content div {
+    overflow: hidden;
+}
+
+.hero {
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-top: 55px;
+    padding-bottom: 120px;
+}
+
+.hero p {
+    width: 500px;
+    margin-left: auto;
+}
+
+.hero strong {
+    display: block;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+.nav-link {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--foreground-colour);
+}
+
+.navbar {
+    transition: opacity 1s;
+    border-bottom: 1.5px solid var(--foreground-colour);
+    background-color: var(--background-colour);
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
