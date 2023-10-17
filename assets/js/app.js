@@ -10,15 +10,6 @@ var app = {
     window.scrollTo({top: 0, behavior: 'smooth'});
   },
   onscrollEvent: function(event) {
-    if (!isScrolledIntoView(document.getElementById("mainHero"))) {
-      document.getElementById("navbar").classList.remove("hidden");
-      document.getElementById("navbar").classList.add("visible");
-    } else {
-      document.getElementById("navbar").classList.remove("visible");
-      document.getElementById("navbar").classList.add("hidden");
-    }
-    console.log(isScrolledIntoView(document.getElementById("mainHero")));
-    console.log(scrollY);
   }
 };
 (function() {
