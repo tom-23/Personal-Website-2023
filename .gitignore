@@ -7,3 +7,4 @@ dist
 /assets/scss/bootstrap
 /assets/js/vendor
 /assets/css/app.css
+.DS_Store

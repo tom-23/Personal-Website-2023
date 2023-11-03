@@ -1,15 +1,51 @@
 // An object literal
+
+
 var app = {
+
+  navVisible: false,
+  navModal: null,
+  loadingModal: null,
+
   init: function() {
-    app.functionOne();
-    document.getElementById("currentYear").innerText = new Date().getFullYear();
+    this.navModal = document.getElementById('nav-modal');
+    this.loadingModal = document.getElementById('loading-modal');
+    this.navModal.classList.add('nav-modal-hide');
+    this.loadingModal.classList.add('loading-modal-hide');
   },
-  functionOne: function () {
-  },
+
   scrollTop: function() {
     window.scrollTo({top: 0, behavior: 'smooth'});
   },
+
+  toggleNav: function() {
+    if (this.isNavVisible() == true) {
+      this.hideNav();
+    } else {
+      this.showNav();
+    }
+  },
+  
+  isNavVisible: function() {
+    return this.navModal.classList.contains("nav-modal-show");
+  },
+
+  hideNav: function() {
+    if (this.navModal.classList.contains("nav-modal-show")) {
+      this.navModal.classList.remove("nav-modal-show")
+    }
+    this.navModal.classList.add('nav-modal-hide');
+  },
+
+  showNav: function() {
+    if (this.navModal.classList.contains("nav-modal-hide")) {
+      this.navModal.classList.remove("nav-modal-hide")
+    }
+    this.navModal.classList.add('nav-modal-show');
+  },
+
   onscrollEvent: function(event) {
+
   }
 };
 (function() {

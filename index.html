@@ -28,7 +28,65 @@
     <!-- endbuild -->
   </head>
 
-  <body>
+  <body onload="onloadEvent();">
+    <div class="nav-modal d-flex flex-column" id="nav-modal">
+      <nav class="navbar navbar-modal p-3" id="navbar">
+        <div class="container-fluid p-0 modal-slide animation-delay-5">
+          <a class="navbar-brand" href="#" onclick="app.toggleNav();">MENU</a>
+          <button
+            class="navicon-button p-0"
+            type="button"
+            onclick="app.toggleNav();"
+          >
+            <div class="navicon"></div>
+          </button>
+        </div>
+      </nav>
+      <div class="container flex-grow-1 p-4">
+        <div class="row justify-content-evenly align-items-center h-100">
+          <div class="col">
+            <div class="navbar-link-container">
+              <a class="modal-slide animation-delay-1 navbar-link">
+                Home
+              </a>
+            </div>
+            <div class="navbar-link-container">
+              <a class="modal-slide animation-delay-2 navbar-link">
+                Portfolio
+              </a>
+            </div>
+            <div class="navbar-link-container">
+              <a class="modal-slide animation-delay-3 navbar-link">
+                Blog
+              </a>
+            </div>
+            <div class="navbar-link-container">
+              <a class="modal-slide animation-delay-4 navbar-link">
+              Contact
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer footer-modal p-3">
+        <div
+          class="container-fluid p-0 d-flex modal-slide animation-delay-6 justify-content-between"
+        >
+          <img
+            src="assets/img/favicons/favicon.svg"
+            alt="Tom Butcher (Logo)"
+            width="15px"
+            height="15px"
+          />
+          <p class="m-0" id="copyrightText">© 2023</p>
+        </div>
+      </footer>
+    </div>
+    <div class="loading-modal d-flex align-items-center justify-content-center" id="loading-modal">
+      <div class="overflow-hidden">
+        <p class="loading-text" id="loading-text">Loading...</p>
+      </div>
+    </div>
     <header>
       <nav class="navbar navbar-expand-md fixed-top p-3" id="navbar">
         <div class="container-fluid p-0">
@@ -109,13 +167,16 @@
               </g>
             </svg>
           </a>
-          <button class="navicon-button p-0" type="button">
+          <button
+            class="navicon-button p-0"
+            type="button"
+            onclick="app.toggleNav();"
+          >
             <div class="navicon"></div>
           </button>
         </div>
       </nav>
     </header>
-
     <main>
       <div id="luxy">
         <div

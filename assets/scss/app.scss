@@ -15,19 +15,50 @@
 //Smooth Scroll
 
 
+@keyframes light-wait {
+  0% {cursor: url('../img/cursor/light/wait1.svg') 16 16, auto;}
+  10% {cursor: url('../img/cursor/light/wait2.svg') 16 16, auto;}
+  20% {cursor: url('../img/cursor/light/wait3.svg') 16 16, auto;}
+  30% {cursor: url('../img/cursor/light/wait4.svg') 16 16, auto;}
+  40% {cursor: url('../img/cursor/light/wait5.svg') 16 16, auto;}
+  50% {cursor: url('../img/cursor/light/wait6.svg') 16 16, auto;}
+  60% {cursor: url('../img/cursor/light/wait7.svg') 16 16, auto;}
+  70% {cursor: url('../img/cursor/light/wait8.svg') 16 16, auto;}
+  80% {cursor: url('../img/cursor/light/wait9.svg') 16 16, auto;}
+  90% {cursor: url('../img/cursor/light/wait10.svg') 16 16, auto;}
+  100% {cursor: url('../img/cursor/light/wait1.svg') 16 16, auto;}
+}
+
+@keyframes dark-wait {
+  0% {cursor: url('../img/cursor/dark/wait1.svg') 16 16, auto;}
+  10% {cursor: url('../img/cursor/dark/wait2.svg') 16 16, auto;}
+  20% {cursor: url('../img/cursor/dark/wait3.svg') 16 16, auto;}
+  30% {cursor: url('../img/cursor/dark/wait4.svg') 16 16, auto;}
+  40% {cursor: url('../img/cursor/dark/wait5.svg') 16 16, auto;}
+  50% {cursor: url('../img/cursor/dark/wait6.svg') 16 16, auto;}
+  60% {cursor: url('../img/cursor/dark/wait7.svg') 16 16, auto;}
+  70% {cursor: url('../img/cursor/dark/wait8.svg') 16 16, auto;}
+  80% {cursor: url('../img/cursor/dark/wait9.svg') 16 16, auto;}
+  90% {cursor: url('../img/cursor/dark/wait10.svg') 16 16, auto;}
+  100% {cursor: url('../img/cursor/dark/wait1.svg') 16 16, auto;}
+}
+
 
 :root {
   --background-colour: #FFFBDC;
   --foreground-colour: #000000;
   --bs-body-line-height: 1.2;
+  cursor: url('../img/cursor/light/pointer.svg') 8.2 4.9, auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-colour: #111111;
-    --foreground-colour: #CDCDCD;
-  }
+a:-webkit-any-link {
+  cursor: url('../img/cursor/light/hand.svg') 12 8, auto;
 }
+
+
+
+
+
 
 #luxy {
   padding-bottom: 90px;
@@ -48,17 +79,42 @@ body a {
   line-height: 1;
   background-color: transparent;
   z-index: 10001;
+  height: 13px;
 }
 
-.navmodal {
+.navicon-button:hover {
+  cursor: url('../img/cursor/dark/hand.svg') 12 8, auto;
+}
+
+.nav-modal {
   display: block;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: fill-available;
   background-color: var(--background-colour);
   z-index: 9999;
+}
+
+.loading-modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: fill-available;
+  background-color: var(--background-colour);
+  z-index: 9999;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: light-wait;
+}
+
+.loading-text {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 main {
@@ -103,6 +159,16 @@ main {
   background-color: var(--background-colour);
   border-top: 1.5px solid var(--foreground-colour);
   overflow-y: scroll;
+}
+
+.footer-modal {
+  border-top: none;
+}
+
+.footer-modal p {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .infobox-container {
@@ -159,5 +225,22 @@ main {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 60px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-colour: #111111;
+    --foreground-colour: #CDCDCD;
+    cursor: url('../img/cursor/dark/pointer.svg') 8.2 4.9, auto;
+  }
+  a:-webkit-any-link {
+    cursor: url('../img/cursor/dark/hand.svg') 12 8, auto;
+  }
+  .navbar-link:hover {
+    cursor: url('../img/cursor/dark/hand.svg') 12 8, auto;
+  }
+  .loading-modal {
+    animation-name: dark-wait;
   }
 }

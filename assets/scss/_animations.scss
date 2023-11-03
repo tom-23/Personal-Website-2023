@@ -91,10 +91,37 @@ $nav-bg: #000;
 
 @keyframes slide-up {
     0% {
-        transform: translateY(250px);
+        transform: translateY(300%);
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(300%);
+    }
+}
+
+@keyframes slide-up-screen {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down-screen {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
     }
 }
 
@@ -102,3 +129,94 @@ $nav-bg: #000;
     animation: slide-up 1s cubic-bezier(0.65, 0, 0.35, 1) both
 }
 
+.nav-modal-show .modal-slide {
+    animation-name: slide-up;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    animation-fill-mode: both;
+}
+
+.nav-modal-hide .modal-slide {
+    animation: slide-down 1s cubic-bezier(0.65, 0, 0.35, 1) both
+}
+
+.nav-modal {
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    animation-fill-mode: both;
+}
+
+.nav-modal-show {
+    animation-delay: 0s;
+    animation-name: slide-up-screen;
+}
+
+.nav-modal-hide {
+    animation-delay: 1.4s;
+    animation-name: slide-down-screen;
+}
+
+.loading-modal-hide {
+    animation-delay: 1.5s !important;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    animation-fill-mode: both;
+    animation-iteration-count: 1 !important;
+    animation-name: slide-down-screen !important;
+}
+
+.loading-modal-hide .loading-text {
+    animation-duration: 1s;
+    animation-delay: 0.5s !important;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    animation-fill-mode: both;
+    animation-name: slide-down;
+}
+
+.animation-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.animation-delay-2 {
+    animation-delay: 0.4s;
+}
+
+.animation-delay-3 {
+    animation-delay: 0.6s;
+}
+
+.animation-delay-4 {
+    animation-delay: 0.8s;
+}
+
+.animation-delay-5 {
+    animation-delay: 1s;
+}
+
+.animation-delay-6 {
+    animation-delay: 1.2s;
+}
+
+.nav-modal-hide .animation-delay-6 {
+    animation-delay: 0.2s;
+}
+
+.nav-modal-hide .animation-delay-5 {
+    animation-delay: 0.4s;
+}
+
+.nav-modal-hide .animation-delay-4 {
+    animation-delay: 0.6s;
+}
+
+.nav-modal-hide .animation-delay-3 {
+    animation-delay: 0.8s;
+}
+
+.nav-modal-hide .animation-delay-2 {
+    animation-delay: 1s;
+}
+
+.nav-modal-hide .animation-delay-1 {
+    animation-delay: 1.2s;
+}
