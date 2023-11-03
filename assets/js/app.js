@@ -12,6 +12,9 @@ var app = {
     this.loadingModal = document.getElementById('loading-modal');
     this.navModal.classList.add('nav-modal-hide');
     this.loadingModal.classList.add('loading-modal-hide');
+    setTimeout(() => {
+      document.body.classList.add('animate');
+    }, 1500);
   },
 
   scrollTop: function() {
