@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/app.min.css">
   </head>
 
-  <body onload="onloadEvent();">
+  <body>
     <div class="nav-modal d-flex flex-column" id="nav-modal">
       <nav class="navbar navbar-modal p-3" id="navbar">
         <div class="container-fluid p-0 modal-slide animation-delay-5">
@@ -44,9 +44,7 @@
         <div class="row justify-content-evenly align-items-center h-100">
           <div class="col">
             <div class="navbar-link-container">
-              <a class="modal-slide animation-delay-1 navbar-link">
-                Home
-              </a>
+              <a class="modal-slide animation-delay-1 navbar-link"> Home </a>
             </div>
             <div class="navbar-link-container">
               <a class="modal-slide animation-delay-2 navbar-link">
@@ -54,14 +52,10 @@
               </a>
             </div>
             <div class="navbar-link-container">
-              <a class="modal-slide animation-delay-3 navbar-link">
-                Blog
-              </a>
+              <a class="modal-slide animation-delay-3 navbar-link"> Blog </a>
             </div>
             <div class="navbar-link-container">
-              <a class="modal-slide animation-delay-4 navbar-link">
-              Contact
-              </a>
+              <a class="modal-slide animation-delay-4 navbar-link"> Contact </a>
             </div>
           </div>
         </div>
@@ -80,91 +74,27 @@
         </div>
       </footer>
     </div>
-    <div class="loading-modal d-flex align-items-center justify-content-center" id="loading-modal">
+    <div
+      class="loading-modal d-flex align-items-center justify-content-center"
+      id="loading-modal"
+    >
       <div class="overflow-hidden">
         <p class="loading-text" id="loading-text">Loading...</p>
       </div>
     </div>
     <header>
-      <nav class="navbar navbar-expand-md fixed-top p-3" id="navbar">
+      <nav class="navbar navbar-transparent fixed-top p-3 fade-in" id="nav-bar">
         <div class="container-fluid p-0">
-          <a class="navbar-brand" href="#">
-            <svg
-              height="13px"
-              viewBox="0 0 1920 171"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              xml:space="preserve"
-              xmlns:serif="http://www.serif.com/"
-              style="
-                display: block;
-                margin: auto;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-                stroke-miterlimit: 1.5;
-              "
+          <div class="navbar-brand-container overflow-hidden d-flex">
+            <a class="navbar-brand" href="#" id="navbar-title"
+              >Tom Butcher</a
             >
-              <g id="Artboard1" transform="matrix(1,0,0,0.141668,0,0)">
-                <rect
-                  x="0"
-                  y="0"
-                  width="1920"
-                  height="1200"
-                  style="fill: none"
-                />
-                <clipPath id="_clip1">
-                  <rect x="0" y="0" width="1920" height="1200" />
-                </clipPath>
-                <g clip-path="url(#_clip1)">
-                  <g transform="matrix(1.39033,0,0,9.81397,-142.21,-960.986)">
-                    <g transform="matrix(1.11699,0,0,1.11699,-11.966,-11.4553)">
-                      <text
-                        x="100.394px"
-                        y="204.28px"
-                        style="
-                          font-family: 'HelveticaNeue-Bold', 'Helvetica Neue';
-                          font-weight: 700;
-                          font-size: 145.499px;
-                          fill: var(--foreground-colour);
-                        "
-                      >
-                        TOM BUTCHER
-                      </text>
-                    </g>
-                    <g
-                      transform="matrix(0.958543,0,0,0.981562,83.1554,3.99837)"
-                    >
-                      <g
-                        transform="matrix(0.912991,0,0,0.912991,332.92,18.8679)"
-                      >
-                        <path
-                          d="M1220.88,216.851L1220.88,100.683L1104.71,100.683"
-                          style="
-                            fill: none;
-                            stroke: rgb(255, 53, 28);
-                            stroke-width: 27.77px;
-                          "
-                        />
-                      </g>
-                      <g
-                        transform="matrix(0.921418,-7.13908e-17,7.13908e-17,0.921418,124.806,8.70612)"
-                      >
-                        <path
-                          d="M1435.58,110.791L1329.83,216.536"
-                          style="
-                            fill: none;
-                            stroke: rgb(255, 53, 28);
-                            stroke-width: 27.52px;
-                          "
-                        />
-                      </g>
-                    </g>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </a>
+            <img
+              src="assets/img/favicons/favicon.svg"
+              alt="Tom Butcher(Logo)"
+              height="15px"
+            />
+          </div>
           <button
             class="navicon-button p-0"
             type="button"
@@ -181,11 +111,10 @@
           class="hero d-flex flex-column justify-content-between"
           id="mainHero"
         >
+          <div class="hero-background"></div>
           <div class="hero-title">
             <div>
-              <h1 class="slide-up animation-delay-1">
-                Developer,
-              </h1>
+              <h1 class="slide-up animation-delay-1">Developer,</h1>
             </div>
             <div>
               <h1 class="slide-up animation-delay-2">Designer,</h1>
@@ -222,7 +151,7 @@
           </div>
           <div style="overflow: hidden">
             <strong class="slide-up animation-delay-6"
-              >Scroll down to see my portfolio</strong
+              >Scroll down to see my portfolio <span><img src="assets/img/favicons/favicon.svg" alt="Tom Butcher (Logo)" height="15px" class="hero-icon"></span></strong
             >
           </div>
         </div>
@@ -292,7 +221,7 @@
       </div>
     </main>
     <!-- FOOTER -->
-    <footer class="fixed-bottom footer">
+    <footer class="fixed-bottom footer footer-hidden" id="footer">
       <div class="infobox-container d-flex justify-content-between p-3">
         <div class="infobox">
           <p class="infobox-title">Email</p>
