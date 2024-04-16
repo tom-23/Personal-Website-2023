@@ -65,7 +65,7 @@ a:-webkit-any-link {
 }
 
 body {
-  padding-top: 3rem;
+  padding-top: 0px;
   padding-bottom: 3rem;
   color: var(--foreground-colour);
   background-color: var(--background-colour);
@@ -159,6 +159,8 @@ main {
   background-color: var(--background-colour);
   border-top: 1.5px solid var(--foreground-colour);
   overflow-y: scroll;
+  opacity: 1.0;
+  transition: opacity 500ms ease;
 }
 
 .footer-modal {
@@ -169,6 +171,10 @@ main {
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.footer-hidden {
+  opacity: 0.0;
 }
 
 .infobox-container {
@@ -190,8 +196,25 @@ main {
   color: var(--foreground-colour);
 }
 
-/* RESPONSIVE CSS
+/* RESPONSIVE + THEME CSS
 -------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-colour: #111111;
+    --foreground-colour: #CDCDCD;
+    cursor: url('../img/cursor/dark/pointer.svg') 8.2 4.9, auto;
+  }
+  a:-webkit-any-link {
+    cursor: url('../img/cursor/dark/hand.svg') 12 8, auto;
+  }
+  .navbar-link:hover {
+    cursor: url('../img/cursor/dark/hand.svg') 12 8, auto;
+  }
+  .loading-modal {
+    animation-name: dark-wait;
+  }
+}
 
 @media (min-width: 40em) {
   /* Bump up size of carousel content */
@@ -218,7 +241,7 @@ main {
     padding-top: 40px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 180px;
+    padding-bottom: 40px;
   }
   .portfolio {
     padding-top: 40px;
@@ -228,19 +251,3 @@ main {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-colour: #111111;
-    --foreground-colour: #CDCDCD;
-    cursor: url('../img/cursor/dark/pointer.svg') 8.2 4.9, auto;
-  }
-  a:-webkit-any-link {
-    cursor: url('../img/cursor/dark/hand.svg') 12 8, auto;
-  }
-  .navbar-link:hover {
-    cursor: url('../img/cursor/dark/hand.svg') 12 8, auto;
-  }
-  .loading-modal {
-    animation-name: dark-wait;
-  }
-}

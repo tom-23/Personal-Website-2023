@@ -8,3 +8,6 @@ dist
 /assets/js/vendor
 /assets/css/app.css
 .DS_Store
+/assets/.DS_STORE
+assets/img/.DS_Store
+assets/img/favicons/.DS_Store

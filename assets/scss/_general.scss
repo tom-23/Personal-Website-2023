@@ -40,6 +40,10 @@ h2 {
     overflow: hidden;
 }
 
+.hero-title h1 {
+    color: var(--foreground-colour);
+}
+
 .hero-content div {
     overflow: hidden;
 }
@@ -47,9 +51,19 @@ h2 {
 .hero {
     padding-left: 85px;
     padding-right: 85px;
-    padding-top: 55px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+
+.hero-background {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
 
 .hero p {
     width: 500px;
@@ -62,6 +76,12 @@ h2 {
 
 strong {
     text-transform: uppercase;
+}
+
+.hero-icon {
+    margin-top: 80px;
+    margin-right: 150px;
+    float: right;
 }
 
 .portfolio {
@@ -90,9 +110,14 @@ a:active { text-decoration: none; }
 }
 
 .navbar {
-    transition: opacity 1s;
+    transition: opacity 1s, background-color 500ms ease, border-color 500ms ease;
     border-bottom: 1.5px solid var(--foreground-colour);
     background-color: var(--background-colour);
+}
+
+.navbar-transparent {
+    background-color: rgba(0, 0, 0, 0.0);
+    border-bottom: 1px transparent solid;
 }
 
 .navbar-modal {
@@ -102,13 +127,30 @@ a:active { text-decoration: none; }
 
 .navbar-brand {
     padding: 0;
-    font-size: 15px;
+    font-size: 19px;
     font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.5s ease;
     color: var(--foreground-colour);
+    line-height: 0.8;
+    margin-right: 10px;
+}
+
+.navbar-brand-container {
+    width: 200px;
+    transition: width 0.5s ease-in-out;
+}
+
+.navbar-transparent .navbar-brand {
+    color: var(--background-colour);
 }
 
 .navbar-brand:hover {
     color: var(--foreground-colour);
+}
+
+.navbar-transparent .navbar-brand:hover {
+    color: var(--background-colour);
 }
 
 .navbar-link {

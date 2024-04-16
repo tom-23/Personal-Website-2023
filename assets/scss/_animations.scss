@@ -125,6 +125,15 @@ $nav-bg: #000;
     }
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+
 .slide-up {
     transform: translateY(300%);
     animation-duration: 1s;
@@ -178,6 +187,34 @@ $nav-bg: #000;
     animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
     animation-fill-mode: both;
     animation-name: slide-down;
+}
+
+.hero-background {
+    opacity: 0.0;
+}
+
+.animate .hero-background {
+    animation-name: fade-in;
+    animation-duration: 2.5s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: both;
+}
+
+.animate .fade-in {
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: both;
+}
+
+.navbar-transparent .navbar-brand-container {
+    width: 0%;
 }
 
 .animation-delay-1 {
