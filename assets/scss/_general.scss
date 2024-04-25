@@ -19,8 +19,13 @@ body::-webkit-scrollbar {
     display: none;
   }  
 
-p, a {
+p, a, li {
     font-size: 10pt;
+}
+
+ul {
+    padding: 0;
+    list-style-position: inside;
 }
 
 h1 {
