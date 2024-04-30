@@ -89,6 +89,17 @@ $nav-bg: #000;
     transform: scale($toggled-size);
 }
 
+@keyframes shadow-inside {
+    from {
+      box-shadow: inset -15px 0px 25px -25px var(--foreground-colour);
+    }
+  
+    to {
+        box-shadow: inset 15px 0px 25px -25px var(--foreground-colour);
+
+    }
+  }
+
 @keyframes slide-up {
     0% {
         transform: translateY(300%);
@@ -168,7 +179,7 @@ $nav-bg: #000;
 }
 
 .nav-modal-hide {
-    animation-delay: 1.4s;
+    animation-delay: 1s;
     animation-name: slide-down-screen;
 }
 
@@ -206,7 +217,7 @@ $nav-bg: #000;
 .animate .fade-in {
     animation-name: fade-in;
     animation-duration: 1s;
-    animation-delay: 3s;
+    animation-delay: 0s;
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-timing-function: cubic-bezier(0, 0, 0, 1);

@@ -118,6 +118,7 @@ a:active { text-decoration: none; }
     transition: opacity 1s, background-color 500ms ease, border-color 500ms ease;
     border-bottom: 1.5px solid var(--foreground-colour);
     background-color: var(--background-colour);
+    z-index: 9999;
 }
 
 .navbar-transparent {
@@ -182,3 +183,8 @@ a:active { text-decoration: none; }
 .visible {
     opacity: 1;
 }
+
+.scroll-shadows {
+    animation: shadow-inside linear;
+    animation-timeline: scroll(self inline);
+  }

@@ -40,6 +40,9 @@ var app = {
       this.navModal.classList.remove("nav-modal-show");
     }
     this.navModal.classList.add("nav-modal-hide");
+    setTimeout(() => {
+      this.onscrollEvent();
+    },1000)
   },
 
   showNav: function () {
@@ -47,9 +50,14 @@ var app = {
       this.navModal.classList.remove("nav-modal-hide");
     }
     this.navModal.classList.add("nav-modal-show");
+    this.transNavbar();
+    this.hideFooter();
   },
 
   onscrollEvent: function (event) {
+    if (this.isNavVisible() == true) {
+      return;
+    }
     if (window.scrollY <= 10 && this.isNavbarTrans() == false) {
       this.transNavbar();
     }
