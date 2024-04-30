@@ -28,34 +28,19 @@
 
   <body>
     <div class="nav-modal d-flex flex-column" id="nav-modal">
-      <nav class="navbar navbar-modal p-3" id="navbar">
-        <div class="container-fluid p-0 modal-slide animation-delay-5">
-          <a class="navbar-brand" href="#" onclick="app.toggleNav();">MENU</a>
-          <button
-            class="navicon-button p-0"
-            type="button"
-            onclick="app.toggleNav();"
-          >
-            <div class="navicon"></div>
-          </button>
-        </div>
-      </nav>
       <div class="container flex-grow-1 p-4">
         <div class="row justify-content-evenly align-items-center h-100">
           <div class="col">
             <div class="navbar-link-container">
-              <a class="modal-slide animation-delay-1 navbar-link"> Home </a>
+              <a class="modal-slide animation-delay-1 navbar-link"> Nothing </a>
             </div>
             <div class="navbar-link-container">
               <a class="modal-slide animation-delay-2 navbar-link">
-                Portfolio
+                Here
               </a>
             </div>
             <div class="navbar-link-container">
-              <a class="modal-slide animation-delay-3 navbar-link"> Blog </a>
-            </div>
-            <div class="navbar-link-container">
-              <a class="modal-slide animation-delay-4 navbar-link"> Contact </a>
+              <a class="modal-slide animation-delay-3 navbar-link"> Yet. </a>
             </div>
           </div>
         </div>
@@ -70,7 +55,6 @@
             width="15px"
             height="15px"
           />
-          <p class="m-0" id="copyrightText">© 2023</p>
         </div>
       </footer>
     </div>
@@ -83,9 +67,9 @@
       </div>
     </div>
     <header>
-      <nav class="navbar navbar-transparent fixed-top p-3 fade-in" id="nav-bar">
+      <nav class="navbar navbar-transparent fixed-top p-0 fade-in" id="nav-bar">
         <div class="container-fluid p-0">
-          <div class="navbar-brand-container overflow-hidden d-flex">
+          <div class="navbar-brand-container overflow-hidden d-flex p-3">
             <a class="navbar-brand" href="#" id="navbar-title">Tom Butcher</a>
             <img
               src="assets/img/favicons/favicon.svg"
@@ -94,7 +78,7 @@
             />
           </div>
           <button
-            class="navicon-button p-0"
+            class="navicon-button p-3"
             type="button"
             onclick="app.toggleNav();"
           >
@@ -162,29 +146,32 @@
         </div>
 
         <div class="portfolio">
-          <div class="portfolio-title mb-5">
+          <div class="portfolio-title mb-5 pb-3">
             <h1>Previous Experience</h1>
           </div>
-          <div class="infobox-container d-flex justify-content-between mb-3">
-            <div class="infobox">
-              <p class="infobox-title">Employer</p>
-              <p class="infobox-content">
-                <a href="https://mycoworks.co.uk/"
-                  >REGISTERED OFFICE (UK) LTD</a
-                >
-              </p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Location</p>
-              <p class="infobox-content">Ipswich, UK</p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Duration</p>
-              <p class="infobox-content">5 MONTHS (DEC 23 - MAY 24)</p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Role</p>
-              <p class="infobox-content">SALES ADMIN</p>
+          <div class="infobox-border p-3 scroll-shadows mb-3 overflow-scroll">
+            <div class="infobox-container d-flex justify-content-between">
+              <img src="/assets/img/logos/tlo.svg" alt="" srcset="" height="32px" class="company-logo">
+              <div class="infobox">
+                <p class="infobox-title">Employer</p>
+                <p class="infobox-content">
+                  <a href="https://mycoworks.co.uk/"
+                    >REGISTERED OFFICE (UK) LTD</a
+                  >
+                </p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Location</p>
+                <p class="infobox-content">Ipswich, UK</p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Duration</p>
+                <p class="infobox-content">5 MONTHS (DEC 23 - MAY 24)</p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Role</p>
+                <p class="infobox-content">SALES ADMIN</p>
+              </div>
             </div>
           </div>
           <div class="mb-5">
@@ -209,30 +196,36 @@
                 Provided clear technical assistance aiding customers with an
                 in-house online portal system.
               </li>
+              <li>Ensured every client interaction followed GDPR and data protection rules to ensure compliance.</li>
+              <li>Provided clear technical assistance aiding customers with an in-house online portal system.</li>
             </ul>
           </div>
-          <div class="infobox-container d-flex justify-content-between mb-3">
-            <div class="infobox">
-              <p class="infobox-title">Employer</p>
-              <p class="infobox-content">
-                <a href="https://revolution-bars.co.uk/"
-                  >REVOLUTION BARS GROUP</a
-                >
-              </p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Location</p>
-              <p class="infobox-content">Ipswich, UK</p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Duration</p>
-              <p class="infobox-content">2 YEARS (SEPT 21 - OCT 23)</p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Role</p>
-              <p class="infobox-content">SALES EXECUTIVE</p>
+          <div class="infobox-border p-3 scroll-shadows mb-3 overflow-scroll">
+            <div class="infobox-container d-flex justify-content-between">
+              <img src="/assets/img/logos/rbg.svg" alt="" srcset="" height="32px" class="company-logo">
+              <div class="infobox">
+                <p class="infobox-title">Employer</p>
+                <p class="infobox-content">
+                  <a href="https://revolution-bars.co.uk/"
+                    >REVOLUTION BARS GROUP</a
+                  >
+                </p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Location</p>
+                <p class="infobox-content">Ipswich, UK</p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Duration</p>
+                <p class="infobox-content">2 YEARS (SEPT 21 - OCT 23)</p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Role</p>
+                <p class="infobox-content">SALES EXECUTIVE</p>
+              </div>
             </div>
           </div>
+          
           <div class="mb-5">
             <ul>
               <li>Analysed sales data to identify trends and address underperforming areas.</li>
@@ -244,30 +237,35 @@
               <li>Managed day-to-day customer enquiries providing fast and effective responses via email and phone.</li>
               <li>Coordinated operation teams to deliver bookings successfully to maintain customer satisfaction.</li>
               <li>Copywriting event and post descriptions highlighting key selling points and delivering accurate information.</li>
+              <li>Ensured booking CRM contact logs were kept up to date with the most latest and relevant customer information.</li>
               </ul>
           </div>
-          <div class="infobox-container d-flex justify-content-between mb-3">
-            <div class="infobox">
-              <p class="infobox-title">Employer</p>
-              <p class="infobox-content">
-                <a href="https://revolution-bars.co.uk/"
-                  >ALBION COMPUTERS (ISTORE)</a
-                >
-              </p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Location</p>
-              <p class="infobox-content">Ipswich, UK</p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Duration</p>
-              <p class="infobox-content">1.5 YEARS (MAY 21 - OCT 22)</p>
-            </div>
-            <div class="infobox">
-              <p class="infobox-title">Role</p>
-              <p class="infobox-content">LEAD TECHNICIAN</p>
+          <div class="infobox-border p-3 scroll-shadows mb-3 overflow-scroll">
+            <div class="infobox-container d-flex justify-content-between">
+              <img src="assets/img/logos/albion.svg" alt="" srcset="" height="32px" class="company-logo">
+              <div class="infobox">
+                <p class="infobox-title">Employer</p>
+                <p class="infobox-content">
+                  <a href="https://revolution-bars.co.uk/"
+                    >ALBION COMPUTERS (ISTORE)</a
+                  >
+                </p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Location</p>
+                <p class="infobox-content">Ipswich, UK</p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Duration</p>
+                <p class="infobox-content">1.5 YEARS (MAY 21 - OCT 22)</p>
+              </div>
+              <div class="infobox">
+                <p class="infobox-title">Role</p>
+                <p class="infobox-content">LEAD TECHNICIAN</p>
+              </div>
             </div>
           </div>
+          
           <div class="mb-0">
             <ul>
               <li>Evaluated overall workshop performance, implementing practices to improve quality and customer satisfaction.</li>
@@ -277,13 +275,17 @@
               <li>Enforced lithium-ion battery-related safety/shipping protocols to maintain a fully compliant repair centre.</li>
               <li>Correctly identified repair-related issues through problem-solving and escalating to Apple Support where required.</li>
               <li>Ensured our customer satisfaction metric was above target by resolving complaints in a constructive manner.</li>
-              </ul>
+              <li>Followed a ticket based workflow for repairs utilising Solarwinds Web Help Desk.</li>
+              <li>Delivered repairs within Apple's strict repair turnaround time to ensure high service centre metrics.</li>
+              <li>Orchestrated a fast-pace environment, prioritising tickets based on time, severity and complexity.</li>
+              <li>Diagnosed software related issues using an internal knowledge base (GSX) and pre existing ICT knowledge.</li>
+            </ul>
           </div>
         </div>
       </div>
     </main>
     <!-- FOOTER -->
-    <footer class="fixed-bottom footer footer-hidden" id="footer">
+    <footer class="fixed-bottom footer footer-hidden scroll-shadows" id="footer">
       <div class="infobox-container d-flex justify-content-between p-3">
         <div class="infobox">
           <p class="infobox-title">Email</p>
